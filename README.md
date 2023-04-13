@@ -14,12 +14,12 @@ kasir. Adapun aktifitas sistem sebagai berikut
 ## Requirenments
 Untuk menunjang terbentuknya aplikasi self service cashier ini, dibutuhkan suatu alur dari setiap aktifitas yang telah dibuat hingga menjadi seperti dibawah
  - Pembuatan ID
-  ID diperuntukan sebagai identitas keranjang yang dimiliki oleh setiap customer. ID dibuat menggunakan bantuan ```UUID``` yang dimana ID diperoleh secara otomatis ketika 
-program dijalankan. Selengkapnya dijelaskan pada diagram alur dibawah.
+ ID diperuntukan sebagai identitas keranjang yang dimiliki oleh setiap customer. ID dibuat menggunakan bantuan ```UUID``` yang dimana ID diperoleh secara otomatis ketika program dijalankan. Selengkapnya dijelaskan pada diagram alur dibawah.
   ![Generate ID Transactions drawio](https://user-images.githubusercontent.com/42725407/231838446-883834b3-b2be-4d3b-b226-ae8fac627281.png)
+ 
  - Menambahkan Barang
-  Customer diperbolehkan untuk menambahkan barang seusai yang mereka inginkan serta sebanyak apapun yang mereka mau. Aktifitas ini terdapat pada fungsi ```add_items```. Fungsi tersebut membutuhkan satu parameter
-  yaitu ```item_list``` yang berisi item apa yang diinputkan oleh customer dan dikemas dalam bentuk dictionary yang dikemas lagi kedalam list. Selengkapnya dijelaskan pada diagram alur dibawah.
+  
+  Customer diperbolehkan untuk menambahkan barang seusai yang mereka inginkan serta sebanyak apapun yang mereka mau. Aktifitas ini terdapat pada fungsi ```add_items```. Fungsi tersebut membutuhkan satu parameter yaitu ```item_list``` yang berisi item apa yang diinputkan oleh customer dan dikemas dalam bentuk dictionary yang dikemas lagi kedalam list. Selengkapnya dijelaskan pada diagram alur dibawah.
   ![Add Item Transactions drawio](https://user-images.githubusercontent.com/42725407/231840309-f0a490fb-b601-4a66-b832-785dcf05b01d.png)
  - Mengubah detail barang
   Customer diperbolehkan untuk mengubah isi keranjang yang dimiliki. Aktifitas ini terdapat pada fungsi ```edit_item```. Fungsi tersebut membutuhkan beberapa parameter seperti
@@ -37,6 +37,11 @@ program dijalankan. Selengkapnya dijelaskan pada diagram alur dibawah.
   ![Delete Items drawio](https://user-images.githubusercontent.com/42725407/231845527-a8ffe1f1-6efb-4ec5-a852-6328aca427e8.png)
  - Reset Keranjang
   Customer diperbolehkan untuk menghapus barang yang dimiliki didalam keranjang dengan menggunakan fungsi ```reset_item```. Fungsi ini akan menghapus semua isi keranjang.
+ - Total Harga
+  Aktifitas ini secara otomatis dilakukan ketika ada suatu aktifitas yang melibatkan keranjang. Setelah customer melakukan satu aktifitas seperti menambah, mengurangi, atau mengubah, total harga akan otomatis berubah sesuai dengan aktifitas yang terjadi terhadap barang atau nilai barang di dalam keranjang. Aktifitas ini dilakukan 
+  didalam fungsi ```total_price```.
+ - Menampilkan Barang
+ Sama seperti ```total harga``` , aktifitas ini dilakukan ketika customer melakukan aktifitas seperti menambah, mengurangi, atau mengubah barang di keranjang. Fungsi ```show_cart``` akan dilakukan sesudah aktifitas sebelumnya dilakukan dengan menampilkan daftar barang didalam keranjang customer.
   
   
   
