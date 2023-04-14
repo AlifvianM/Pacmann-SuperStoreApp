@@ -179,6 +179,21 @@ class Transactions:
 
     def check_list_item(self, item_name):
 ```
+
+## Penggunaan
+Sistem ini digunakan dengan menjalankan program pada `main.py`. Customer akan ditanyai terkait opsi yang akan customer inginkan seperti 
+- barang apa yang ingin ditambahkan ?
+- berapa jumlahnya ?
+- berapa harganya ?
+- apa yang ingin dilakukan setelahnya ?
+  - ```what you want to do next ?
+            [1] edit item
+            [2] delete item
+            [3] reset chart  
+            [4] finish
+    ``` 
+
+Semua jawaban akan dikemas dalam satu variable yang disesuaikan dengan inputan pada masing masing method yang digunakan pada class `transactions`. Sitem mencoba memberikan pendekatan yang lebih personal layaknya seperti melakukan proses beli di toko. 
   
 ## Test Case
 Ada beberapa test case yang dilakukan untuk menguji sistem yang dijabarkan dibawah : 
@@ -190,3 +205,5 @@ Ada beberapa test case yang dilakukan untuk menguji sistem yang dijabarkan dibaw
 ![reset_cart](./reset_cart.png)
 - Menghitung total belanja menggunakan method `total_price()`
 ![total_price](./total_price.png) 
+- Mengubah Nilai ayam goreng menjadi sepeda motor dengan count sebanyak 3 dan harga 100000
+![edit_item](./edit_item.png)
