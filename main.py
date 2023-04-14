@@ -11,9 +11,30 @@ if __name__ == "__main__":
     item = {}
     while True:
         item_name = input("Item Name :")
-        count = int(input("Count :"))
-        price = int(input("Price :"))
+        try:
+            if int(item_name):
+                print("You cannot fill the item beginning with digit")
+                continue
+        except:
+            pass
+        else:
+            pass
 
+        count = input("Count :")
+        try:
+            count = int(count)
+        except:
+            print("You cannot fill count with alphabets")
+            continue
+            
+        price = input("Price :")
+        try:
+            price = int(price)
+        except:
+            print("You cannot fill price with alphabets")
+            continue
+        
+        
         item[item_name] = {
             "count":count,
             "price":price

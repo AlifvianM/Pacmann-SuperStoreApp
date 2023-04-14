@@ -82,7 +82,7 @@ class Transactions:
             value that will delete key / item name.
         """
         
-        # list_cart = list(self.items.keys())
+        list_cart = list(self.items.keys())
         try:
             self.items.pop(item)
         except:
@@ -114,11 +114,11 @@ class Transactions:
             total_price.append(self.items[item]["count"]*self.items[item]["price"])
 
         if sum(total_price) > 500000:
-            print(f"total : {sum(total_price) - (0.1 * sum(total_price))}")
+            print(f"You get 10% dicsount !\nTotal : {sum(total_price) - (0.1 * sum(total_price))}")
         elif sum(total_price) > 300000:
-            print(f"total : {sum(total_price) - (0.08 * sum(total_price))}")
+            print(f"You get 8% dicsount !\ntotal : {sum(total_price) - (0.08 * sum(total_price))}")
         elif sum(total_price) > 200000:
-            print(f"total : {sum(total_price) - (0.05 * sum(total_price))}")
+            print(f"You get 8% dicsount !\ntotal : {sum(total_price) - (0.05 * sum(total_price))}")
         else:
             print(f"Total : {sum(total_price)}")
 
