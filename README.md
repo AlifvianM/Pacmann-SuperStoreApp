@@ -207,3 +207,6 @@ Ada beberapa test case yang dilakukan untuk menguji sistem yang dijabarkan dibaw
 ![total_price](./total_price.png) 
 - Mengubah Nilai ayam goreng menjadi sepeda motor dengan count sebanyak 3 dan harga 100000
 ![edit_item](./edit_item.png)
+
+## Conclusion
+Sistem self service cashier superstore-App ini berjalan sesuai latar belakang masalah dan requirements yang dibutuhkan. Pada test case yang dilakukan dapat dilihat kalau sistem sudah dapat menjalankan program sesuai yang diinginkan. 
